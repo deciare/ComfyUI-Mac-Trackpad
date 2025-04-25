@@ -4,8 +4,9 @@ import { app } from "../../../scripts/app.js";
 app.registerExtension({
 	name: "ComfyUI-Mac-Trackpad",
 	async setup(app2) {
-		app2.canvas.ds.element.removeEventListener("mousewheel", app2.canvas.ds._binded_mouse_callback);
-		app2.canvas.ds.element.removeEventListener("wheel", app2.canvas.ds._binded_mouse_callback);
+		app2.canvas.ds.element.removeEventListener("mousewheel", app2.canvas._mousewheel_callback);
+		app2.canvas.ds.element.removeEventListener("wheel", app2.canvas._mousewheel_callback);
+		console.debug("canvasdselement:", app2.canvas.ds.element);
 		app2.canvas.ds.element.addEventListener("wheel", processWheel.bind(app2.canvas), false);
 	}
 });
