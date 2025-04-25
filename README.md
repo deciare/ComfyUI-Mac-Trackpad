@@ -11,7 +11,9 @@ fixes https://github.com/comfyanonymous/ComfyUI/issues/2059
 
 ### Installation
 
-1. Put this folder into ComfyUI/web/extensions/TinkerBot-tech-for-ComfyUI-Touchpad
-2. Restart ComfyUI
-3. Reload the UI
+The ComfyUI frontend is now distributed as a pip package called `comfyui_frontend_package`.
+
+1. Put this folder into the `static/extensions` subdirectory of the `comfyui_frontend_package`. The exact location of the pip package depends on where the `site-packages` folder is for your Python environment.
+2. Restart ComfyUI.
+3. Reload the UI.
 4. Enjoy!
